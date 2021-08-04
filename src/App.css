@@ -1,0 +1,8 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-game {
+    padding: 20px;
+}

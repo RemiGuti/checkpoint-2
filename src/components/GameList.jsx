@@ -11,7 +11,8 @@ function GameList() {
         Axios.get("https://apis.wilders.dev/wild-games/games/").then(gamelist => {
             setGames(gamelist.data)
         })
-    }) 
+    },[]) 
+
 
     const [rate, setRate] = useState (0)
 

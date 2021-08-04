@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 function Game({game}) {
     return (
-        <div>
-            {game.name}
+        <div className="card">
+            <Link to={"/games/"+game.id}>{game.name}</Link>
             {game.rating}
-            <img src = {game.background_image} alt="image"/>
+            <img className="img-game" src = {game.background_image} alt="image"/>
         </div>
     )
 }
