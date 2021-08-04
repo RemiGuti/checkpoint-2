@@ -5,7 +5,7 @@ function Game({game}) {
         <div>
             {game.name}
             {game.rating}
-            {game.background_image}
+            <img src = {game.background_image} alt="image"/>
         </div>
     )
 }

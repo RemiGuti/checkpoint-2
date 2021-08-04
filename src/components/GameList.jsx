@@ -12,14 +12,23 @@ function GameList() {
             setGames(gamelist.data)
         })
     }) 
-    
+
+    const [rate, setRate] = useState (0)
+
+    function rating() {
+        setRate(rate == 0 ? 4.2 : 0)
+}
     return (
+       <div>
+        <button onClick = {rating}>Les mieux notés</button>
+
         <div className="GameList">
-            {games.map((game) => (
-                <div key={game.id}>
-                    <Game game={game}/>
-                </div>
-            ))}
+                {games.filter(g => g.rating >= rate).map((game) => (
+                    <div key={game.id}>
+                        <Game game={game}/>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
